@@ -31,7 +31,7 @@ let db = {
   // Inserir dados
   app.post('/users/creditSAP', (req, res) =>{
       const body = req.body;
-    if(!body){
+    if(!body.codigo_cliente || body.codigo_cliente === ""){
          return res.json(dberror);
     }
     else{
